@@ -14,12 +14,9 @@ namespace play.Controllers
 
         public ActionResult Index()
         {
-            var user = new User { ID = 1, Name = "aab" };
-            Security.Login(user);
-            //Security.Logout();
-            //var b = Security.IsLogin;
-            return Content("ok");
+            return View();
         }
 
+        
     }
 }

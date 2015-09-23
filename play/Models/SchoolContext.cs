@@ -13,12 +13,17 @@ namespace play.Models
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<RolePemission> RolePermissions { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
-        public SchoolContext() : base("name=db") { }
+        public StoredProcedure StoredProcedure { get; set; }
+        public SchoolContext()
+            : base("name=db")
+        {            
+            StoredProcedure = new StoredProcedure(this);
+        }
 
-        public void Insert<T>(T entity, bool save = true) where T:class
+        public void Insert<T>(T entity, bool save = true) where T : class
         {
             Set<T>().Add(entity);
-            if(save)
+            if (save)
             {
                 SaveChanges();
             }

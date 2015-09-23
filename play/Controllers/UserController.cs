@@ -6,13 +6,10 @@ using System.Web.Mvc;
 using play.Models;
 
 namespace play.Controllers
-{
-    [MyAuthorize(PermissionSet.User)]
+{    
     public class UserController : Controller
     {
-        //
-        // GET: /User/
-
+        [MyAuthorize(PermissionSet.User)]
         public ActionResult Index()
         {
             return Content("用户-主页");
