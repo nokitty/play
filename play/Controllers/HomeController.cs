@@ -21,6 +21,29 @@ namespace play.Controllers
         public ActionResult Upload(string name, int chunk, int chunks, HttpPostedFileBase data)
         {
             var result = new AjaxResult();
+
+            var path = Server.MapPath("~/upload/");
+            using (var file=System.IO.File.Create(path+name+"_"+chunk))
+            {
+                file.Write(data.InputStream);
+            }
+
+            if(chunk==chunks-1)
+            {
+                using (var file=System.IO.File.Create(path+name))
+                {
+                    for (int i = 0; i < chunks; i++)
+                    {
+                        var p = path + name + "_" + i;
+                        using(var cf=System.IO.File.OpenRead(p))
+                        {
+                            file.Write(cf);
+                        }
+                        System.IO.File.Delete(p);
+                    }
+                }
+            }
+
             return Json(result);
         }
     }

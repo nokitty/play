@@ -57,7 +57,9 @@
                 <h4 class="modal-title">Modal title</h4>
             </div>
             <div class="modal-body">
-                <p>One fine body&hellip;</p>
+                <div class="progress">
+                    <div class="progress-bar" id="progress"></div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -110,10 +112,12 @@
         $(function()
         {
             $("#file").change(function () {
+                var progress = $("#progress");
                 var uploader = new Uploader(this.files[0]);
                 uploader.url = "/home/upload";
                 uploader.onProgress = function (p) {
-                    console.log(p);
+                    p = Math.floor(p * 100);
+                    progress.css({ "width": p + "%" });
                 }
                 uploader.Start();
             })
