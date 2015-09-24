@@ -179,6 +179,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="js\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\1123.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

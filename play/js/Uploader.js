@@ -1,6 +1,5 @@
 var Uploader = (function () {
     function Uploader(file) {
-        this.onFail = null;
         this.onProgress = null;
         this.onDone = null;
         this.onError = null;

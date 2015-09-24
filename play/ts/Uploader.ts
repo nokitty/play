@@ -10,7 +10,6 @@ interface AjaxResult
 
 class Uploader
 {
-    onFail: () => void = null;
     onProgress: (percentage: number) => void = null;
     onDone: () => void = null;
     onError: (msg: string) => void = null;
