@@ -37,7 +37,7 @@ var Uploader = (function () {
                 _this.chunk++;
                 if (_this.chunk == _this.chunks) {
                     if (_this.onDone != null) {
-                        _this.onDone();
+                        _this.onDone(xhr.response);
                     }
                 }
                 else {

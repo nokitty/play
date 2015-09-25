@@ -11,7 +11,7 @@ interface AjaxResult
 class Uploader
 {
     onProgress: (percentage: number) => void = null;
-    onDone: () => void = null;
+    onDone: (data:any) => void = null;
     onError: (msg: string) => void = null;
 
     url = '';
@@ -66,7 +66,7 @@ class Uploader
                 {
                     if (this.onDone != null)
                     {
-                        this.onDone();
+                        this.onDone(xhr.response);
                     }
                 }
                 else
