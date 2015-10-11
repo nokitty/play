@@ -18,7 +18,7 @@ namespace BackgroundWorker
             worker.Add(new Job1(TimeSpan.FromSeconds(3), "job3"));
             worker.Add(new Job3());
 
-            worker.Start();
+            worker.StartAsync();
         }
     }
 }

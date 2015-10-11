@@ -23,6 +23,20 @@ namespace BackgroundWorker
             job.Parent = this;
             Jobs.Add(job);
         }
+
+        /// <summary>
+        /// 非阻塞运行Worker
+        /// </summary>
+        public  void  StartAsync()
+        {
+            var thread = new Thread(new ThreadStart(Start));
+            thread.IsBackground = true;
+            thread.Start();
+        }
+
+        /// <summary>
+        /// 运行Worker,阻塞当前线程
+        /// </summary>
         public void Start()
         {
             while (true)
