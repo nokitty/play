@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using play.Models;
+using Crc32C;
 
 namespace play.Controllers
 {
@@ -14,7 +15,18 @@ namespace play.Controllers
 
         public ActionResult Index()
         {
+            var crc32 = Crc32C.Crc32CAlgorithm.Compute(System.Text.Encoding.UTF8.GetBytes("this is a string"));
+            return Content(crc32.ToString());
+        }
+
+        public ActionResult A()
+        {
             return View();
+        }
+
+        public ActionResult Page()
+        {
+            return PartialView("page");
         }
 
         [HttpPost]

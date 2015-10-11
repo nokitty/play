@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="911594e5-5112-4aee-aa0c-5f50a6a2ee9b"
+  name="flow" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="0f072272-a387-4616-8cb0-b85ff7d3130e"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="1ad650eb-930c-41b7-8d8b-348be680b5b5">
+          <propertyInstance
+            Id="c8acd515-9cc6-4075-82d7-00fbdd7ecfd2"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="4b537088-91eb-4ceb-952d-b18b2ee7587b">
+          <propertyInstance
+            Id="897963b8-0f96-47a9-9e98-39c376276cca"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="a1aea1c4-83d7-4033-8cd8-974e4773b388">
+          <propertyInstance
+            Id="87dbf086-0670-455d-be72-c7543eb3dd6e"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="4fbbaa4d-6c78-417c-87dd-1ed487867e7f"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="9ebfe076-4b0f-473b-b006-1dfa98ff7828">
+          <propertyInstance
+            Id="0450ea15-1416-46d4-99ac-d0dde5c3e668"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="87ba1a95-62ba-4898-ba2c-df50d58bf131">
+          <propertyInstance
+            Id="79badffb-c60a-45b9-8340-fc86d57cb08d"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="58e40b74-e08c-43a7-b4c7-ff3c20229e59">
+          <propertyInstance
+            Id="e2709b37-81f8-4bf1-806a-8c1ce3961e0f"
+            name="ProjectPath"
+            value="ClassTemplate=..\flowLib\flowLib.csproj|EnumTemplate=..\flowLib\flowLib.csproj|InterfaceTemplate=..\flowLib\flowLib.csproj|StructTemplate=..\flowLib\flowLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b19516c1-9287-464f-a730-3c91b23d8006">
+          <propertyInstance
+            Id="6dd8066f-e8f4-4fe7-8d24-ad0a8483a7f6"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="ab492d38-c9b0-4bd2-bcd1-1152a9dcc791">
+          <propertyInstance
+            Id="da8b3016-24db-4bc2-a4b1-984ff73aa696"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b8a4ebd0-9c6b-41c2-b7cd-d9d83f507202">
+          <propertyInstance
+            Id="fd9ab241-8cb0-4935-a994-90aa21b60c73"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="2b56271c-fa02-48f4-a613-9c4d65e9f84f">
+          <propertyInstance
+            Id="c03a4b96-c851-4d9b-ae3a-0ed54150dd94"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="a3d54074-f957-4058-bdec-3e9b557211ac">
+      <profileInstance
+        Id="fec0b7dd-d286-4bb7-830f-9218aff5de27"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="500790da-5b85-4ecc-a241-be4897fbae20">
+      <profileInstance
+        Id="7b5bf913-584d-4c44-a4ce-64855861f18e"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <component
+        Id="be21b260-3c5f-4980-a926-aea6208a1edd"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="941bab4e-821a-4924-b657-d9b8c685610b"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="38a2e682-63f7-48d8-8a3c-c971148924a7"
+            name="Initial1"
+            isLeaf="false" />
+          <activityFinalNode
+            Id="b08a6073-eb5d-4c02-a45e-1262e17d813a"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="21986ad3-8ed1-468b-a373-42ebc11c6088"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="77830d78-5958-4e13-9940-6ce500880b49"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b103d9ce-b3e5-4711-953a-b8fbee6655d6"
+                LastKnownName="beginNode : BeginNode"
+                LastKnownLocation="flow.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="9274d75d-4da0-4db2-a74f-4e054e24332a"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="flow.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="88b0241a-619b-4d38-b3a1-6d394e29dea7"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="flow.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="23b231ee-7fb0-439a-b1c2-d92209e9b7d6"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="flow.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="eec30f5e-30af-4b41-b52d-313084e015b3"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="flow.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="88b0241a-619b-4d38-b3a1-6d394e29dea7"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4a0cead5-cf2d-4f2b-b429-b15b69fd71fd"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="flow.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b103d9ce-b3e5-4711-953a-b8fbee6655d6"
+                LastKnownName="beginNode : BeginNode"
+                LastKnownLocation="flow.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="353381b8-8553-4852-a767-5cef5754937f"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="0195e35e-dd42-479c-ab72-88b45f95926e"
+                LastKnownName="flow : Flow"
+                LastKnownLocation="flow.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="23b231ee-7fb0-439a-b1c2-d92209e9b7d6"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="b103d9ce-b3e5-4711-953a-b8fbee6655d6"
+                LastKnownName="beginNode : BeginNode"
+                LastKnownLocation="flow.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eec30f5e-30af-4b41-b52d-313084e015b3"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="b103d9ce-b3e5-4711-953a-b8fbee6655d6"
+                LastKnownName="beginNode : BeginNode"
+                LastKnownLocation="flow.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3bb739e4-c8c1-4e29-8e89-2bdbd6e8caf0"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="0195e35e-dd42-479c-ab72-88b45f95926e"
+                LastKnownName="flow : Flow"
+                LastKnownLocation="flow.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="9274d75d-4da0-4db2-a74f-4e054e24332a"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b5e50dbd-1806-452b-b6d7-5a85f3cfb8dc"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="flow.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b103d9ce-b3e5-4711-953a-b8fbee6655d6"
+                LastKnownName="beginNode : BeginNode"
+                LastKnownLocation="flow.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="0195e35e-dd42-479c-ab72-88b45f95926e"
+            name="flow : Flow"
+            isActor="false"
+            lifelineDisplayName="flow : Flow">
+            <represents>
+              <propertyMoniker
+                Id="d638d7d9-d716-4762-b3d4-3944a74e9a92"
+                LastKnownLocation="flow.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="353381b8-8553-4852-a767-5cef5754937f"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="flow.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3bb739e4-c8c1-4e29-8e89-2bdbd6e8caf0"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="flow.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="b103d9ce-b3e5-4711-953a-b8fbee6655d6"
+            name="beginNode : BeginNode"
+            isActor="false"
+            lifelineDisplayName="beginNode : BeginNode">
+            <represents>
+              <propertyMoniker
+                Id="032733f7-2082-4334-bfaa-c068ba07ed1f"
+                LastKnownLocation="flow.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="88b0241a-619b-4d38-b3a1-6d394e29dea7"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="flow.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9274d75d-4da0-4db2-a74f-4e054e24332a"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="flow.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="f28829bd-910c-4807-87c3-cba10636e9a2"
+            name="&lt;&lt;begin&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="353381b8-8553-4852-a767-5cef5754937f"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="flow.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="23b231ee-7fb0-439a-b1c2-d92209e9b7d6"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="flow.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="be3b7d9c-8dc8-461a-91f7-062972378424"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="eec30f5e-30af-4b41-b52d-313084e015b3"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="flow.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3bb739e4-c8c1-4e29-8e89-2bdbd6e8caf0"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="flow.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="d638d7d9-d716-4762-b3d4-3944a74e9a92"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="3558fd6f-d242-4896-90d3-470d98a80d29"
+                LastKnownName="Flow"
+                LastKnownLocation="Package_1119.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="032733f7-2082-4334-bfaa-c068ba07ed1f"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="ba414606-6252-4d1d-a61d-14226bf251f2"
+                LastKnownName="BeginNode"
+                LastKnownLocation="Package_1119.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4a0cead5-cf2d-4f2b-b429-b15b69fd71fd"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b5e50dbd-1806-452b-b6d7-5a85f3cfb8dc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="88b81781-f9c7-4fa5-b9f9-d7e096ca08cb"
+        LastKnownName="Package1"
+        LastKnownLocation="Package_1119.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="79473bc0-67bf-4572-986c-6770c01270d3"
+        LastKnownName="Entitys"
+        LastKnownLocation="Package_1120.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

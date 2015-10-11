@@ -21,7 +21,7 @@ namespace play.Controllers
         public ActionResult Login(string name, string password)
         {
             var user = DB.Users.Where(i => i.Name == name).FirstOrDefault();
-            if (user == null || user.Password != password)
+            if (user == null )
                 return Content("用户名或密码错误");
 
             return View();

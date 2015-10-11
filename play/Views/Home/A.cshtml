@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>A</title>
+    <script src="~/js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        @Html.Action("page")
+    </div>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                var w=$(window);
+                var bottom = w.scrollTop() + w.height();
+                var more = $('.more');
+                if (more.length == 0)
+                    return;
+
+                if(more.offset().top<=bottom)
+                {
+                    more.remove();
+                    $.get('/home/page', function (data) {
+                        $('.container').append(data);
+                    })
+                }
+            });
+        });
+    </script>
+</body>
+</html>
