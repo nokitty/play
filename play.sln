@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "play", "play\play.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgrounWorker", "Jobs\BackgrounWorker.csproj", "{9FC101B8-1A71-4000-BCA0-389424529EF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base62Converter", "Base62Converter\Base62Converter.csproj", "{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9FC101B8-1A71-4000-BCA0-389424529EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FC101B8-1A71-4000-BCA0-389424529EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FC101B8-1A71-4000-BCA0-389424529EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
