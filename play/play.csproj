@@ -147,7 +147,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Base62Converter.cs" />
     <Compile Include="Models\MyAuthorizeAttribute.cs" />
     <Compile Include="Models\Pemission.cs" />
     <Compile Include="Models\PermissionSet.cs" />
@@ -160,6 +159,9 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\ManageBase.cs" />
+    <Compile Include="UnitOfWork\UserManager.cs" />
+    <Compile Include="UnitOfWork\WorkOfUnit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
