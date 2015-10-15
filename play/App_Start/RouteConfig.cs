@@ -13,6 +13,8 @@ namespace play
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("static", "static/file.xml", new { controller = "test", action = "static" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

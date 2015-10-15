@@ -12,10 +12,10 @@ var Uploader = (function () {
         this.file = file;
         this.chunks = Math.ceil(this.file.size / this.chunkSize);
     }
-    Uploader.prototype.Start = function () {
+    Uploader.prototype.start = function () {
         this.Upload();
     };
-    Uploader.prototype.Stop = function () {
+    Uploader.prototype.stop = function () {
         this.isStop = true;
     };
     Uploader.prototype.Upload = function () {

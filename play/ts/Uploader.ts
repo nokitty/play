@@ -16,8 +16,8 @@ class Uploader
 
     url = '';
     chunkSize = 256 * 1024;
+    file: File;
 
-    private file: File;
     private chunks: number = 0;
     private name = '' + new Date().getTime() + Math.random();
     private chunk = 0;
@@ -29,12 +29,12 @@ class Uploader
         this.chunks = Math.ceil(this.file.size / this.chunkSize);
     }
 
-    Start(): void
+    start(): void
     {
         this.Upload();
     }
 
-    Stop(): void
+    stop(): void
     {
         this.isStop = true;
     }
