@@ -33,7 +33,11 @@ class BatchUploader
                 if (this.onProgress != null)
                     this.onProgress(p1);
             };
-            u.onDone = () => { this.start(); };
+            u.onDone = () =>
+            {
+                this.loadedSize += u.file.size;
+                this.start();
+            };
             u.start();
             this.currentIndex++;
         }
