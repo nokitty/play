@@ -36,5 +36,11 @@ namespace play.Controllers
             return Content("xml");
         }
 
+        public ActionResult AdminUser()
+        {
+            var user = DB.AdminUsers.Where(u => u.Username == "23").FirstOrDefault();
+            return Content("ok");
+        }
+
     }
 }

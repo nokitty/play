@@ -14,6 +14,7 @@ namespace play.Models
         public DbSet<RolePemission> RolePermissions { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public StoredProcedure StoredProcedure { get; set; }
+        public DbSet<AdminUser> AdminUsers { get; set; }
         public SchoolContext()
             : base("name=db")
         {            
@@ -36,6 +37,11 @@ namespace play.Models
             {
                 SaveChanges();
             }
+        }
+
+        public void InsertUser(User user)
+        {
+            Insert(user);
         }
     }
 }

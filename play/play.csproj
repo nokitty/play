@@ -152,6 +152,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminUser.cs" />
     <Compile Include="Models\MyAuthorizeAttribute.cs" />
     <Compile Include="Models\Pemission.cs" />
     <Compile Include="Models\PermissionSet.cs" />

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="flow.Node">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAACCAAAAAAEAAAAAAAAAAAAAAAAAQAIAAA=</HashCode>
+      <FileName>Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="flow.BeginNode">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>BeginNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="flow.EndNode">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EndNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="flow.NodeBase">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>NodeBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgrounWorker", "Jobs\Bac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base62Converter", "Base62Converter\Base62Converter.csproj", "{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flow", "flow\flow.csproj", "{B5D5F09A-E213-4DEA-B40A-6CC634A21772}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D5F09A-E213-4DEA-B40A-6CC634A21772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D5F09A-E213-4DEA-B40A-6CC634A21772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D5F09A-E213-4DEA-B40A-6CC634A21772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D5F09A-E213-4DEA-B40A-6CC634A21772}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
