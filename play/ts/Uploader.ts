@@ -7,11 +7,15 @@ interface AjaxResult
     Data?: any;
 }
 
+interface UploaderDoneData {
+    File?: File;
+    Data?: any;
+}
 
 class Uploader
 {
     onProgress: (percentage: number) => void = null;
-    onDone: (data:any) => void = null;
+    onDone: (data:UploaderDoneData) => void = null;
     onError: (msg: string) => void = null;
 
     url = '';
@@ -66,7 +70,10 @@ class Uploader
                 {
                     if (this.onDone != null)
                     {
-                        this.onDone(xhr.response);
+                        var data: UploaderDoneData = {};
+                        data.File = this.file;
+                        data.Data = result.Data;
+                        this.onDone(data);
                     }
                 }
                 else

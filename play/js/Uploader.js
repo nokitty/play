@@ -37,7 +37,10 @@ var Uploader = (function () {
                 _this.chunk++;
                 if (_this.chunk == _this.chunks) {
                     if (_this.onDone != null) {
-                        _this.onDone(xhr.response);
+                        var data = {};
+                        data.File = _this.file;
+                        data.Data = result.Data;
+                        _this.onDone(data);
                     }
                 }
                 else {

@@ -42,5 +42,34 @@ namespace play.Controllers
             return Content("ok");
         }
 
+        public ActionResult Upload(string filename,int chunk,int chunks,HttpPostedFileBase file)
+        {
+            var result = new AjaxResult();
+            using (var fs = System.IO.File.Create(string.Format("~/temp/{0)_{1}", filename, chunk).MapPath()))
+            {
+                fs.Write(file.InputStream);
+            }
+
+            if (chunk == chunks - 1)
+            {
+                var mergePath = string.Format("~/temp/{0}", filename).MapPath();
+                using (var fs = System.IO.File.Create(mergePath))
+                {
+                    for (int i = 0; i < chunks; i++)
+                    {
+                        var chunkPath = string.Format("~/temp/{0)_{1}", filename, i).MapPath();
+                        using (var cf = System.IO.File.OpenRead(chunkPath))
+                        {
+                            fs.Write(cf);
+                        }
+                        System.IO.File.Delete(chunkPath);
+                    }
+                    result.Data = filename;
+                }
+
+                System.IO.File.Delete(mergePath);
+            }
+            return Json(result);
+        }
     }
 }

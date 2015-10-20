@@ -47,7 +47,7 @@
     <div class="btn btn-danger" data-toggle="modal" data-target="#myModal">打开</div>
     <div class="btn btn-primary btn-file">
         <span>上传</span>
-        <input id="file" type="file" />
+        <input id="file" type="file" multiple="multiple" />
     </div>
 
     <div class="modal-dialog">
@@ -108,18 +108,26 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/js/bootstrap.min.js"></script>
     <script src="~/js/Uploader.js"></script>
+    <script src="~/js/BatchUploader.js"></script>
     <script>
         $(function()
         {
             $("#file").change(function () {
                 var progress = $("#progress");
-                var uploader = new Uploader(this.files[0]);
+                var uploader = new BatchUploader();
                 uploader.url = "/home/upload";
+                for (var i = 0; i < this.files.length; i++)
+                {
+                    uploader.add(this.files[i]);
+                }                
                 uploader.onProgress = function (p) {
                     p = Math.floor(p * 100);
                     progress.css({ "width": p + "%" });
                 }
-                uploader.Start();
+                uploader.onDone = function (datas) {
+                    alert(JSON.stringify(datas));
+                }
+                uploader.start();
             })
         })
     </script>

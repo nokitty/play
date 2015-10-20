@@ -5,15 +5,26 @@ class BatchUploader
     private list: Array<Uploader>;
     private totalSize = 0;
     private loadedSize = 0;
-    currentIndex: number;
+    private doneDataList: Array<UploaderDoneData>;
+    currentIndex=0;
+    url = "";
+    chunkSize = 256 * 1024;
 
     onProgress: (percentage: number) => void = null;
-    onDone: (data: any) => void = null;
+    onDone: (datas: Array<UploaderDoneData>) => void = null;
     onError: (msg: string) => void = null;
+
+    constructor() {
+        this.list = new Array<Uploader>();
+        this.doneDataList = [];
+    }
 
     add(file: File)
     {
-        this.list.push(new Uploader(file));
+        var uploader = new Uploader(file);
+        uploader.url = this.url;
+        uploader.chunkSize = this.chunkSize;
+        this.list.push(uploader);
         this.totalSize += file.size;
     }
 
@@ -33,8 +44,9 @@ class BatchUploader
                 if (this.onProgress != null)
                     this.onProgress(p1);
             };
-            u.onDone = () =>
+            u.onDone = (data) =>
             {
+                this.doneDataList.push(data);
                 this.loadedSize += u.file.size;
                 this.start();
             };
@@ -44,7 +56,7 @@ class BatchUploader
         else
         {
             if (this.onDone != null)
-                this.onDone(null);
+                this.onDone(this.doneDataList);
         }
     }
     stop()

@@ -5,18 +5,18 @@ using System.Web;
 using System.Web.Mvc;
 using play.Models;
 using Crc32C;
+using PagedList;
 
 namespace play.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ControllerBase
     {
         //
         // GET: /Home/
 
         public ActionResult Index()
         {
-            var crc32 = Crc32C.Crc32CAlgorithm.Compute(System.Text.Encoding.UTF8.GetBytes("this is a string"));
-            return Content(crc32.ToString());
+            return View();
         }
 
         public ActionResult A()
@@ -54,6 +54,7 @@ namespace play.Controllers
                         System.IO.File.Delete(p);
                     }
                 }
+                result.Data = name;
             }
 
             return Json(result);

@@ -2,12 +2,20 @@ var BatchUploader = (function () {
     function BatchUploader() {
         this.totalSize = 0;
         this.loadedSize = 0;
+        this.currentIndex = 0;
+        this.url = "";
+        this.chunkSize = 256 * 1024;
         this.onProgress = null;
         this.onDone = null;
         this.onError = null;
+        this.list = new Array();
+        this.doneDataList = [];
     }
     BatchUploader.prototype.add = function (file) {
-        this.list.push(new Uploader(file));
+        var uploader = new Uploader(file);
+        uploader.url = this.url;
+        uploader.chunkSize = this.chunkSize;
+        this.list.push(uploader);
         this.totalSize += file.size;
     };
     BatchUploader.prototype.start = function () {
@@ -23,7 +31,8 @@ var BatchUploader = (function () {
                 if (_this.onProgress != null)
                     _this.onProgress(p1);
             };
-            u.onDone = function () {
+            u.onDone = function (data) {
+                _this.doneDataList.push(data);
                 _this.loadedSize += u.file.size;
                 _this.start();
             };
@@ -32,7 +41,7 @@ var BatchUploader = (function () {
         }
         else {
             if (this.onDone != null)
-                this.onDone(null);
+                this.onDone(this.doneDataList);
         }
     };
     BatchUploader.prototype.stop = function () {
