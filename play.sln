@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "play", "play\play.csproj", "{C6088AD9-7173-40FD-97FA-0D9F8BF04284}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base62Converter", "Base62Converter\Base62Converter.csproj", "{94E882AB-DA7D-462A-9DBC-F5ABE7D170EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flow", "flow\flow.csproj", "{B5D5F09A-E213-4DEA-B40A-6CC634A21772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reflect", "reflect\reflect.csproj", "{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B5D5F09A-E213-4DEA-B40A-6CC634A21772}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5D5F09A-E213-4DEA-B40A-6CC634A21772}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5D5F09A-E213-4DEA-B40A-6CC634A21772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
