@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flow", "flow\flow.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reflect", "reflect\reflect.csproj", "{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CssSelectorToXPath", "CssSelectorToXPath\CssSelectorToXPath.csproj", "{E98CAD75-0535-4DD2-8053-5A0B82A0D5D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24AB73E-0065-4D19-A2D3-29A8B1FC980D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98CAD75-0535-4DD2-8053-5A0B82A0D5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98CAD75-0535-4DD2-8053-5A0B82A0D5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98CAD75-0535-4DD2-8053-5A0B82A0D5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98CAD75-0535-4DD2-8053-5A0B82A0D5D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
