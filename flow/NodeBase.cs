@@ -7,6 +7,7 @@ namespace flow
 {
     public class NodeBase
     {
+        public int ID { get; set; }
 
         public NodeStates State
         {

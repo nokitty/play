@@ -9,15 +9,15 @@ namespace flow
     {
         private List<Node> _parents;
         private List<Node> _children;
+        public bool IsVisited { get; set; }
 
         public List<Node> Parents
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                if (_parents == null)
+                    _parents = new List<Node>();
+                return _parents;
             }
         }
 
@@ -25,10 +25,9 @@ namespace flow
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                if (_children == null)
+                    _children = new List<Node>();
+                return _children;
             }
         }
 

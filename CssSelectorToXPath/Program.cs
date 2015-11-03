@@ -16,7 +16,7 @@ namespace CssSelectorToXPath
 
         static string Convert(string selector)
         {
-            var result = "//";
+            var result = "";
             //先按照空格分开
             var regex = new Regex(@"\S+");
             var matches= regex.Matches(selector);
@@ -52,8 +52,7 @@ namespace CssSelectorToXPath
                     predicate = predicate.Substring(0, predicate.Length - 4);
                     node += string.Format("[{0}]", predicate);
                 }
-                node += "//";
-                result+=node;
+                result+="//"+node;
             }
 
             return result;
