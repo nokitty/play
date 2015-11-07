@@ -145,6 +145,7 @@
     <Compile Include="Background\BackgroundSetup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\MultiUploadController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -212,6 +213,7 @@
     <None Include="Properties\PublishProfiles\1123.pubxml" />
     <Content Include="Views\Home\Page.cshtml" />
     <Content Include="Views\Home\A.cshtml" />
+    <Content Include="Views\MultiUpload\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
