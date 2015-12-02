@@ -145,6 +145,8 @@
     <Compile Include="Background\BackgroundSetup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\HttpMethodController.cs" />
+    <Compile Include="Controllers\ModalController.cs" />
     <Compile Include="Controllers\MultiUploadController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -214,6 +216,8 @@
     <Content Include="Views\Home\Page.cshtml" />
     <Content Include="Views\Home\A.cshtml" />
     <Content Include="Views\MultiUpload\Index.cshtml" />
+    <Content Include="Views\HttpMethod\Index.cshtml" />
+    <Content Include="Views\Modal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

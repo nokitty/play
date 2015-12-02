@@ -50,6 +50,23 @@
         <input id="file" type="file" multiple="multiple" />
     </div>
 
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <div class ="dropdown-menu">
+            <input type="text" class="form-control" />
+            <div class="btn btn-primary">按钮</div>
+            <ul >
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -112,6 +129,8 @@
     <script>
         $(function()
         {
+            $(document).on('click', '.dropdown-menu .btn', function () { return false; });
+
             $("#file").change(function () {
                 var progress = $("#progress");
                 var uploader = new BatchUploader();

@@ -2,7 +2,131 @@
     ViewBag.Title = "Index";
 }
 
-<form method="post" enctype="multipart/form-data">
-    <input type="file" multiple="" name="file" />
-    <input type="submit" />
+<style>
+    .thumb {
+        position: relative;
+        margin-left: 10px;
+        float: left;
+    }
+
+        .thumb img {
+            max-height: 150px;
+            max-width: 150px;
+        }
+
+        .thumb .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .thumb .text{
+
+        }
+</style>
+
+<form id="form">
+    <div id="thumb-list"></div>
+    <div style="clear:both"></div>
+    <input id="files" type="file" multiple="" name="file" />
+    <input type="submit" id="submit" />
 </form>
+
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    var fileManager = function () {
+        var id = 0;
+        this.list = [];
+
+        this.add = function (file) {
+            var obj = {};
+            obj.hash = file.name + file.size;
+
+            var exist = false;
+            for (var i = 0; i < this.list.length; i++) {
+                if (this.list[i].hash == obj.hash) {
+                    exist = true;
+                    break;
+                }
+            }
+
+            if (exist == true) {
+                return 0;
+            }
+            else {
+                obj.id = ++id;
+                obj.file = file;
+                this.list.push(obj);
+                return obj.id;
+            }
+        }
+
+        this.remove = function (id) {
+            for (var i = 0; i < this.list.length; i++) {
+                if (this.list[i].id == id) {
+                    this.list.splice(i, 1);
+                    break;
+                }
+            }
+        }
+    }
+
+    var manager = new fileManager();
+
+    $("#files").change(function () {
+        var files = $('#files')[0].files;
+
+        var name = prompt('请输入文件名');        
+
+        var thumbList = $('#thumb-list');
+
+        for (var i = 0; i < files.length; i++) {
+            var reader = new FileReader();
+
+            reader.id = manager.add(files[i]);
+            if (reader.id != 0) {
+                reader.onload = function (e) {
+                    var thumb = $('<div class="thumb" id="thumb-' + e.target.id + '"></div>');
+                    var img = $('<img/>')
+                    img.attr('src', e.target.result);
+                    thumb.append(img);
+
+                    var text = $('<div class="text">' + name + '</div>');
+                    thumb.append(text);
+
+                    var close = $('<button type="button" class="close" data-id="' + e.target.id + '">删除</button>')
+                    thumb.append(close);
+
+
+
+                    thumbList.append(thumb);
+                }
+                reader.readAsDataURL(files[i]);
+            }
+        }
+    })
+
+    $('#submit').click(function () {
+        var files = $('#files')[0].files;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("post", "");
+        var formData = new FormData();
+
+        for (var i = 0; i < files.length; i++) {
+            formData.append("file", files[i]);
+        }
+
+        xhr.send(formData);
+        return false;
+    })
+
+    $(document).on('click', '.thumb .close', function () {
+        var t = $(this);
+        var id = t.data('id');
+        var thumb = $('#thumb-' + id);
+        manager.remove(id);
+        thumb.remove();
+    })
+</script>
