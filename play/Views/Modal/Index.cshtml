@@ -13,7 +13,7 @@
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,12 +39,33 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">modal1</h4>
                 </div>
-                <div class="modal-body">
-                    <p>One fine body&hellip;</p>
+                <div class="loading">
+                    <div class="modal-body">
+                        <div><i class="icon-spinner icon-spin"></i> 读取中...</div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="next2">Save changes</button>
+                <div class="content">
+                    <div class="modal-body">
+                        <div class="select">
+                            <input type="hidden" />
+                            <div class="dropdown">
+                                <button class="btn btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="text">Dropdown</span> 
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="item" data-value="Action">Action</a></li>
+                                    <li><a href="#" class="item" data-value="Another action">Another action</a></li>
+                                    <li><a href="#" class="item" data-value="Something else here">Something else here</a></li>
+                                    <li><a href="#" class="item" data-value="Separated link">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="next2">Save changes</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,7 +80,7 @@
                     <p>One fine body&hellip;</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default message" >消息框</button>
+                    <button type="button" class="btn btn-default message">消息框</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" id="next1">Save changes</button>
                 </div>
@@ -91,6 +112,18 @@
     <script src="~/js/BatchUploader.js"></script>
     <script>
         $(function () {
+
+            $(document).on('click', '.select .item', function () {
+                var t = $(this);
+                var btnText = t.parents('.select').find('.btn .text');
+                var input = t.parents('.select').find('input');
+                var value = t.data('value');
+                var text = t.text();
+
+                btnText.text(text);
+                input.val(value);
+            });
+
             var prev = null;
 
             function RollBack() {
@@ -130,7 +163,19 @@
 
             $('#btn').click(function () { ShowModal($('#modal1')); });
 
-            $(document).on('click', '#next1', function () { ShowModal($('#modal1')) });
+            $(document).on('click', '#next1', function () {
+                var modal = $('#modal1');
+                var loading = modal.find('.loading');
+                var content = modal.find('.content');
+                loading.show();
+                content.hide();
+
+                setTimeout(function () {
+                    loading.slideUp();
+                    content.slideDown();
+                }, 2000);
+                ShowModal(modal);
+            });
             $(document).on('click', '#next2', function () { ShowModal($('#modal2')) });
             $(document).on('click', '.rollback', function () { RollBack(); });
             $(document).on('click', '.message', function () { ShowModal($('#message')) });
