@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-select.min.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+    <style>
+        .inline-block {
+            display: inline-block;
+        }
+
+        .text-ellipsis {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .btn-group.select {
+            width: 100%;
+        }
+
+            .btn-group.select .btn, .btn-group.select .dropdown-menu {
+                width: 100%;
+            }
+
+            .btn-group.select .option {
+                cursor: pointer;
+            }
+
+            .btn-group.select .current {
+                width: 90%;
+                text-align: left;
+            }
+    </style>
+
+    <div class="container">
+        <select class="selectpicker">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+
+        <form>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="btn-group select" style="margin:15px;">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="pull-left current text-ellipsis">Action </span><span class="pull-right"><span class="caret"></span></span>
+                        </button>
+                        <ul class="dropdown-menu options">
+                            <li><a class="option text-ellipsis" data-value="action">Action</a></li>
+                            <li><a class="option" data-value="Another action">Another action</a></li>
+                            <li><a class="option" data-value="Something else here">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a class="option" data-value="Separated link">Separated link</a></li>
+                        </ul>
+                        <input type="hidden" name="uu" />
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-default">提交</button>
+        </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-select.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.selectpicker').selectpicker({
+                style: 'btn-default',
+                size: 4
+            });
+
+            $(document).on('click', '.select .option', function () {
+                var option = $(this);
+                var value = option.data('value');
+
+                var select = option.parents('.select');
+                select.find('.options .active').removeClass('active');
+                option.parent().addClass('active');
+
+                var input = select.find('input[type="hidden"]');
+                input.val(value);
+
+                var current = select.find('.current').text(value);
+            })
+        })
+    </script>
+</body>
+</html>

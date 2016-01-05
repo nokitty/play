@@ -141,7 +141,7 @@
                 var modal = $('#modal');
                 modal.modal('show');
                 var visible = modal.find('.modal-dialog:visible');
-                visible.animate({ opacity: '0', marginTop: '0px', marginBottom: '0px', height: '0px' }, function () {
+                visible.animate({ opacity: '0', marginTop: '0px', marginBottom: '0px', height:'0px' }, function () {
                     $(this).removeAttr('style');
                     visible.remove();
                     modal.append(visible);
