@@ -55,7 +55,7 @@
     </style>
 
     <div class="container">
-        <select class="selectpicker">
+        <select>
             <option>Mustard</option>
             <option>Ketchup</option>
             <option>Relish</option>
@@ -90,25 +90,48 @@
     <script src="/js/bootstrap-select.min.js"></script>
 
     <script>
+        $.fn.bsSelect=function(method,args)
+        {
+            var select = $(this);
+            var options = select.find('.options');
+            var current = select.find('.current');
+            var input = select.find('input[type="hidden"]');
+
+            switch (method) {
+                case "add":
+                    {
+                        var option = $('<li><a class="option" data-value=""></a></li>');
+                        var a = option.find('a');
+                        a.attr('data-value', args.value);
+                        a.text(args.text);
+                        options.append(option);
+                    }
+                    break;
+                case "select":
+                    {
+                        var option = options.find('.option[data-value="' + args + '"]');
+                        
+                        if (option.length!=0)
+                        {
+                            options.find('.active').removeClass('active');
+                            option.parent().addClass('active');
+                            input.val(option.data('value'));
+                            current.text(option.text());
+                        }
+                    }
+                    break;
+            }
+        }
+
         $(function () {
-            $('.selectpicker').selectpicker({
-                style: 'btn-default',
-                size: 4
-            });
-
+            
             $(document).on('click', '.select .option', function () {
-                var option = $(this);
-                var value = option.data('value');
-
-                var select = option.parents('.select');
-                select.find('.options .active').removeClass('active');
-                option.parent().addClass('active');
-
-                var input = select.find('input[type="hidden"]');
-                input.val(value);
-
-                var current = select.find('.current').text(value);
+                var select = $(this).parents('.select');
+                var value = $(this).data('value');
+                select.bsSelect('select', value);
             })
+
+            $('.select').bsSelect('add', { text: 'new item', value: '1234' });
         })
     </script>
 </body>
